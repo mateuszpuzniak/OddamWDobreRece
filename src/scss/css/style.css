@@ -1,0 +1,245 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v5.0.1 | 20191019
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+menu,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu,
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+nav {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul > li {
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid transparent;
+}
+
+.linkA {
+  text-decoration: none;
+  color: #3C3C3C;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+}
+
+nav li:hover {
+  border: 1px solid #3c3c3c;
+  opacity: 1;
+}
+
+.headerBtns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: white;
+  padding: 10px 20px;
+  font-weight: 500;
+  color: #3C3C3C;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0px 30px;
+  letter-spacing: 0px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border: 1px solid #FAD648;
+  opacity: 1;
+}
+
+.heroimg {
+  margin-left: -480px;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.homeText {
+  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeTextP {
+  font-family: "Open Sans", sans-serif;
+  color: #3C3C3C;
+}
+
+.homeTextBtn {
+  font-weight: 300;
+  width: 300px;
+  height: 120px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 36px;
+  margin: 15px;
+  border: 1px solid #3c3c3c;
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  color: #3C3C3C;
+  cursor: pointer;
+}
+
+.homeTextBtn:hover {
+  border: 2px solid #3c3c3c;
+}
+
+/*# sourceMappingURL=style.css.map */

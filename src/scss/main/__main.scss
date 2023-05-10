@@ -1,0 +1,91 @@
+@import '../reset/__reset.scss';
+@import '../settings/__fonts';
+@import '../settings/_colors';
+
+.container {
+	max-width: 1800px;
+	margin: 0 auto;
+}
+nav {
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+ul > li {
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+	border: 1px solid transparent;
+}
+
+.linkA {
+	text-decoration: none;
+	color: $dark-grey;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: $font-base;
+}
+nav li:hover {
+	border: 1px solid #3c3c3c;
+	opacity: 1;
+}
+.headerBtns {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 20px;
+}
+.btn {
+	background-color: white;
+	padding: 10px 20px;
+	font-weight: 500;
+	color: $dark-grey;
+	font-size: 16px;
+	font-family: $font-base;
+	margin: 0px 30px;
+	letter-spacing: 0px;
+	border: 1px solid transparent;
+	cursor: pointer;
+}
+.btn:hover {
+	border: 1px solid $gold;
+	opacity: 1;
+}
+.heroimg {
+	margin-left: -480px;
+}
+.rightSide {
+	display: flex;
+	flex-direction: column;
+}
+.homeText {
+	margin-top: 180px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.homeTextP {
+	font-family: $font-base;
+	color: $dark-grey;
+}
+.homeTextBtn {
+	font-weight: 300;
+	width: 300px;
+	height: 120px;
+	font-family: $font-base;
+	font-size: 36px;
+	margin: 15px;
+	border: 1px solid #3c3c3c;
+	background-color: white;
+	font-family: $font-base;
+	color: $dark-grey;
+	cursor: pointer;
+}
+.homeTextBtn:hover {
+	border: 2px solid #3c3c3c;
+}
