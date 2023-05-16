@@ -3,7 +3,7 @@
 @import '../settings/_colors';
 
 .container {
-	max-width: 1800px;
+	max-width: 1900px;
 	margin: 0 auto;
 }
 nav {
@@ -50,13 +50,19 @@ nav li:hover {
 	letter-spacing: 0px;
 	border: 1px solid transparent;
 	cursor: pointer;
+	text-decoration: none;
 }
 .btn:hover {
 	border: 1px solid $gold;
 	opacity: 1;
 }
+.link {
+	@extend .btn;
+}
+
 .heroimg {
 	margin-left: -480px;
+	margin-bottom: -3px;
 }
 .rightSide {
 	display: flex;
@@ -72,6 +78,7 @@ nav li:hover {
 .homeTextP {
 	font-family: $font-base;
 	color: $dark-grey;
+	letter-spacing: -0.76px;
 }
 .homeTextBtn {
 	font-weight: 300;
@@ -80,12 +87,187 @@ nav li:hover {
 	font-family: $font-base;
 	font-size: 36px;
 	margin: 15px;
-	border: 1px solid #3c3c3c;
+	border: 1px solid $dark-grey;
 	background-color: white;
 	font-family: $font-base;
 	color: $dark-grey;
 	cursor: pointer;
+	letter-spacing: -0.76px;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	&:hover {
+		border-color: $dark-grey;
+		border-width: 2px;
+	}
 }
-.homeTextBtn:hover {
-	border: 2px solid #3c3c3c;
+
+.yellowH2 {
+	font-size: 80px;
+	font-family: $font-base;
+	color: $dark-grey;
+	margin-bottom: 30px;
+	font-weight: 400;
+}
+.yellowSpan {
+	font-family: $font-base;
+	color: $dark-grey;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: -0.36px;
+}
+.yellowP {
+	font-size: 16px;
+	font-family: $font-all;
+	color: $dark-grey;
+	font-weight: 200;
+	margin-top: 20px;
+	letter-spacing: -0.32px;
+	text-align: center;
+}
+.fourStepsH2 {
+	font-family: $font-base;
+	color: $dark-grey;
+	letter-spacing: -0.76px;
+}
+.fourIcons {
+	padding: 50px 0px;
+	background: $white 0% 0% no-repeat padding-box;
+}
+.fourIcons > div {
+	font-family: $font-base;
+	text-align: center;
+}
+.aboutUsP {
+	text-align: center;
+	font-size: 30px;
+	font-family: $font-base;
+	letter-spacing: -0.6px;
+	color: $dark-grey;
+	width: 500px;
+	height: 150px;
+}
+.loginBtn {
+	letter-spacing: 0px;
+	color: #000000;
+	font-family: $font-base;
+	font-size: 18px;
+	border: 1px solid transparent;
+	background: none;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.loginBtn:hover {
+	border: 0.75px solid $dark-grey;
+}
+.loginLabel {
+	color: $dark-grey;
+	font-family: $font-base;
+	letter-spacing: 0px;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.loginInput {
+	border: none;
+	border-bottom: 1px solid $grey;
+	background: none;
+	margin-bottom: 25px;
+	height: 25px;
+	font-size: 20px;
+	color: $dark-grey;
+	font-family: $font-base;
+	letter-spacing: 0px;
+}
+.loginInput:focus {
+	outline: none;
+}
+
+.helpBtnDiv {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.helpBtn {
+	letter-spacing: 0px;
+	color: #000000;
+	font-family: $font-base;
+	font-size: 24px;
+	border: 1px solid $dark-grey;
+	background: none;
+	cursor: pointer;
+	padding: 20px 35px;
+	margin: 0px 50px 45px 50px;
+}
+.helpTextDiv {
+	width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.helpText {
+	font-family: $font-base;
+	color: $dark-grey;
+	font-size: 22px;
+	letter-spacing: 0px;
+}
+.helpOptionsDiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.helpOption {
+	width: 1200px;
+	height: 90px;
+	border-bottom: 1px solid black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.helpOptionSpan {
+	font-weight: 300;
+	font-size: 24px;
+	font-family: $font-all;
+	color: $dark-grey;
+	letter-spacing: 0px;
+}
+.helpOptionP {
+	font-weight: 300;
+	font-size: 16px;
+	letter-spacing: 0px;
+	font-family: $font-all;
+	font-style: italic;
+	color: $dark-grey;
+}
+.helpOptionPP {
+	font-weight: 300;
+	font-size: 16px;
+	letter-spacing: 0px;
+	font-family: $font-all;
+	color: $dark-grey;
+	margin-right: 20px;
+}
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+.pagination button {
+	letter-spacing: 0px;
+	color: #000000;
+	font-family: $font-base;
+	font-size: 24px;
+	border: 1px solid $dark-grey;
+	background: none;
+	cursor: pointer;
+	padding: 10px 15px;
 }

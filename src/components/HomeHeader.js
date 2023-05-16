@@ -1,12 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function HomeHeader() {
 	return (
 		<div>
-			<div style={{display:"flex", justifyContent:"flex-end"} }>
+			<div style={{ display: 'flex', justifyContent: 'flex-end' }}>
 				<header className='headerBtns'>
-					<button className='btn'>Zaloguj</button>
-					<button className='btn'>Załóż konto</button>
+					<Link to='/logowanie' className='btn link'>
+						Zaloguj
+					</Link>
+					<Link to='/rejestracja' className='btn link'>
+						Załóż konto
+					</Link>
 				</header>
 			</div>
 		</div>

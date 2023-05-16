@@ -6,16 +6,20 @@ import HomeText from './HomeText'
 
 function Home() {
 	return (
-		<div className='container home' style={{display:"flex", justifyContent:"space-between"}}>
-			<div className="heroimg">
-				<HomeImg />
+		<section>
+			<div
+				className='container home'
+				style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '100%', height: 'auto' }}>
+				<div className='heroimg' style={{height:"auto"}}>
+					<HomeImg />
+				</div>
+				<div className='rightSide'>
+					<HomeHeader />
+					<HomeNavigation />
+					<HomeText />
+				</div>
 			</div>
-			<div className='rightSide'>
-				<HomeHeader />
-				<HomeNavigation />
-				<HomeText />
-			</div>
-		</div>
+		</section>
 	)
 }
 

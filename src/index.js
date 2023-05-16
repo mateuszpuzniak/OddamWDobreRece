@@ -1,25 +1,24 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import "./scss/style.scss"
-// import { HashRouter } from 'react-router-dom'
-import Home from './components/Home'
-// import HomeHeader from './components/HomeHeader'
-// import HomeNavigation from './components/HomeNavigation'
-import HomeImg from './components/HomeImg'
-// import App from './App'
+// import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Layout from './components/Layout'
+import Login from './components/Login'
+import Register from "./components/Register"
 
-// createRoot(document.getElementById('root')).render(
-// 	<React.StrictMode>
-// 		<HashRouter>
-// 			<App />
-// 		</HashRouter>
-// 	</React.StrictMode>
-// )
+
+
+
 function App() {
 	return (
-		<div>
-			<Home />
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route path='/' element={<Layout />} />
+				<Route path="/logowanie" element={<Login />} />
+                <Route path="/rejestracja" element={<Register />} />
+			</Routes>
+		</BrowserRouter>
 	)
 }
 const container = document.getElementById('root')

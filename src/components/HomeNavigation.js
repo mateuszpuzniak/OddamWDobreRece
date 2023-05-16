@@ -7,10 +7,10 @@ function HomeNavigation() {
 				<nav>
 					<ul>
                     <li><a className='linkA' href='/'>Start</a></li>
-					<li><a className='linkA' href='/'>O co Chodzi?</a></li>
-					<li><a className='linkA' href='/'>O nas</a></li>
-					<li><a className='linkA' href='/'>Fundacja i organizacje</a></li>
-					<li><a className='linkA' href='/'>Kontakt</a></li>
+					<li><a className='linkA' href='#ocochodzi'>O co Chodzi?</a></li>
+					<li><a className='linkA' href='#aboutUs'>O nas</a></li>
+					<li><a className='linkA' href='#whowehelping'>Fundacja i organizacje</a></li>
+					<li><a className='linkA' href='#contact'>Kontakt</a></li>
                     </ul>
 				</nav>
 			</div>
