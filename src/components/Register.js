@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { auth } from './FireBase'
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
 import { Link } from 'react-router-dom'
 import HomeHeader from './HomeHeader'
 import HomeNavigation from './HomeNavigation'
@@ -11,11 +13,12 @@ function validateEmail(email) {
 }
 
 function Register() {
+	const [userInfo, setUserInfo] = useState('użytkownik niezalogowany')
 	const [email, setEmail] = useState('')
+	const [password, setPassword] = useState('')
 	const [isValidEmail, setValidEmail] = useState(null)
 	const [isValidPassOne, setValidPassOne] = useState(null)
 	const [isValidPassTwo, setValidPassTwo] = useState(null)
-    const [passwordOne, setPasswordOne] = useState('');
 
 	const handleChangeEmail = event => {
 		setEmail(event.target.value)
@@ -24,14 +27,14 @@ function Register() {
 
 	const handleChangePassOne = event => {
 		const text = event.target.value
-        setPasswordOne(text);
+		setPassword(text)
 		setValidPassOne(text.length >= 6)
 	}
 
 	const handleChangePassTwo = event => {
 		const text = event.target.value
-        const isPasswordMatch = text === passwordOne;
-        setValidPassTwo(text.length >= 6 && isPasswordMatch);
+		const isPasswordMatch = text === password
+		setValidPassTwo(text.length >= 6 && isPasswordMatch)
 	}
 
 	const handleSubmit = event => {
@@ -41,8 +44,23 @@ function Register() {
 		setValidEmail(isEmailValid)
 
 		if (isEmailValid && isValidPassOne && isValidPassTwo) {
-			console.log('Logged In')
+			console.log('Registered')
+			register()
 		}
+	}
+
+	const register = () => {
+		createUserWithEmailAndPassword(auth, email, password)
+			.then(() => {
+				signInWithEmailAndPassword(auth, email, password)
+					.then(res => {
+						console.log('Użytkownik zalogowany.')
+						setUserInfo(res.user.email)
+						// navigate("/o-nas");
+					})
+					.catch(err => console.log(err))
+			})
+			.catch(err => console.log(err))
 	}
 
 	return (
@@ -112,7 +130,7 @@ function Register() {
 									Hasło
 								</label>
 								<input
-                                    value={passwordOne}
+									value={password}
 									onChange={handleChangePassOne}
 									className='loginInput'
 									type='password'
@@ -120,7 +138,9 @@ function Register() {
 									style={{ width: '220px' }}
 								/>
 								{isValidPassOne === false && (
-									<div style={{ color: 'red', lineBreak: 'auto' }}>Hasło musi zawierać <br /> co najmniej 6 znaków.</div>
+									<div style={{ color: 'red', lineBreak: 'auto' }}>
+										Hasło musi zawierać <br /> co najmniej 6 znaków.
+									</div>
 								)}
 								{isValidPassOne && (
 									<div style={{ color: 'green', marginBottom: '20px' }}>Hasło spełniające wymogi.</div>
