@@ -148,7 +148,7 @@ function Login() {
 								style={{ padding: '10px 20px', marginTop: '30px' }}>
 								Zaloguj się
 							</button>
-							<Link to='/rejestracja' className='loginBtn'>
+							<Link to='/rejestracja' className='loginBtn' style={{textDecoration:"none", padding:"10px 20px", marginTop:"30px"}}>
 								Załóż konto
 							</Link>
 						</div>

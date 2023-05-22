@@ -175,7 +175,7 @@ function Register() {
 							<button className='loginBtn' type='submit' style={{ padding: '10px 20px', marginTop: '30px' }}>
 								Załóż konto
 							</button>
-							<Link to='/logowanie' className='loginBtn'>
+							<Link to='/logowanie' className='loginBtn' style={{textDecoration:"none", padding:"10px 20px", marginTop:"30px"}}>
 								Zarejestrowano
 							</Link>
 						</div>
