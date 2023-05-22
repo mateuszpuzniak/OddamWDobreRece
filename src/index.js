@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Layout from './components/Layout'
 import Login from './components/Login'
 import Register from "./components/Register"
+import Logout from './components/Logout'
 
 
 
@@ -17,6 +18,7 @@ function App() {
 				<Route path='/' element={<Layout />} />
 				<Route path="/logowanie" element={<Login />} />
                 <Route path="/rejestracja" element={<Register />} />
+                <Route path="/wylogowano" element={<Logout />} />
 			</Routes>
 		</BrowserRouter>
 	)

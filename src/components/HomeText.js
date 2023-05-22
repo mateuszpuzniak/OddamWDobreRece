@@ -15,7 +15,7 @@ function HomeText() {
 					<Link to='/logowanie' className='homeTextBtn linkBtn'>
 						ODDAJ RZECZY
 					</Link>
-					<Link to='/rejestracja' className='homeTextBtn linkBtn'>
+					<Link to='/' className='homeTextBtn linkBtn'>
 						ZORGANIZUJ ZBIÓRKĘ
 					</Link>
 				</div>
